@@ -1,6 +1,5 @@
-%   pdflatex resume.tex
 \documentclass[10pt, letterpaper]{article}
- 
+
 % Packages
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -11,27 +10,27 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{parskip}
- 
+
 % Page geometry - tighter margins
 \geometry{top=0.4in, bottom=0.4in, left=0.55in, right=0.55in}
- 
+
 % No page numbers
 \pagestyle{empty}
- 
+
 % Hyperlink styling - black, no color
 \hypersetup{colorlinks=false, hidelinks}
- 
+
 % Section title formatting
 \newcommand{\sectionfont}[1]{\MakeUppercase{#1}}
 \titleformat{\section}
   {\normalsize\bfseries}
   {}{0em}{\sectionfont}
   [\vspace{1pt}\titlerule\vspace{2pt}]
-\titlespacing{\section}{0pt}{6pt}{2pt}
- 
+\titlespacing{\section}{0pt}{4pt}{2pt}
+
 % Custom commands
 \newcommand{\resumeItem}[1]{\item \small #1}
- 
+
 \newcommand{\jobentry}[4]{%
   \noindent
   \begin{tabularx}{\linewidth}{@{}X r@{}}
@@ -40,16 +39,16 @@
   \end{tabularx}
   \vspace{-6pt}
 }
- 
+
 \newcommand{\projectentry}[2]{%
   \noindent\textbf{\small #1} \hfill \small #2\nopagebreak\vspace{-2pt}
 }
- 
+
 % List settings - very tight
 \setlist[itemize]{leftmargin=1.1em, itemsep=0pt, parsep=0pt, topsep=1pt, label=\textbullet}
- 
+
 \begin{document}
- 
+
 % HEADER
 \begin{center}
   {\LARGE\bfseries Connor Fisher}\\[4pt]
@@ -60,95 +59,89 @@
   \href{https://github.com/connfish}{github.com/connfish} \quad$\cdot$\quad
   Toms River, NJ
 \end{center}
- 
 
+\vspace{-4pt}
+\noindent\rule{\linewidth}{1pt}
+\vspace{-2pt}
 
- 
 % EDUCATION
 \section{Education}
- 
+
 \noindent
 \begin{tabularx}{\linewidth}{@{}X r@{}}
   \textbf{\small Rutgers, The State University of New Jersey} --- New Brunswick, NJ & \small Expected May 2027 \\
-  \textit{\small B.S., Double Major: Computer Science \& Data Science} & \small GPA: 3.3/4.0 \\
+  \textit{\small B.S., Double Major: Computer Science \& Data Science} & \small GPA: 3.22/4.0 \\
 \end{tabularx}
- 
+
 \vspace{2pt}
 \noindent\textbf{\small Relevant Coursework:}\hspace{4pt}
-\small Machine Learning Principles, Regression Methods, Data Management for Data Science, Principles of Information \& Database Management, Statistical Inference for Data Science, Design \& Analysis of Computer Algorithms, Introduction to Data Science, Computer Architecture, Discrete Structures I \& II, Calculus I---III, Linear Algebra, Data Structures \& Algorithms
- 
+\small Data Structures \& Algorithms, Computer Architecture, Design \& Analysis of Algorithms, Statistical Inference for Data Science, Data Management for Data Science, Discrete Structures I \& II, Linear Algebra
+
 % WORK EXPERIENCE
 \section{Work Experience}
- 
+
 \jobentry{Lockheed Martin --- Rotary and Mission Systems}{Software Engineering Intern}{King of Prussia, PA}{May -- Aug. 2026}
 \begin{itemize}
-  \resumeItem{Developed and maintained C++ system infrastructure components within the Electronic Cyber and Information Warfare (ECIW) Department of Rotary and Mission Systems, contributing to mission-critical software performance and reliability.}
-  \resumeItem{Collaborated with cross-functional teams on classified defense projects.}
-  \resumeItem{Authored unit and integration tests for C++ modules, improving code coverage and reducing defect rates in pre-release validation.}
-  \resumeItem{Produced technical documentation for software interfaces and system design decisions in accordance with department standards.}
+  \resumeItem{Developed and maintained system infrastructure components within the ECIW Department, contributing to mission-critical software performance and reliability.}
+  \resumeItem{Automated network configuration and administration using \textbf{Ansible}, PyYAML, and custom Python scripts to streamline deployment across multiple systems.}
+  \resumeItem{Authored regression testing playbooks to validate functionality and reliability across a variety of networked systems.}
+  \resumeItem{Engineered an automated \textbf{STIG hardening role} to fully automate security compliance across various RHEL systems.}
+  \resumeItem{Deployed and managed containerized services using \textbf{Docker} and \textbf{Kubernetes}, configuring container networking for scalable and reliable system infrastructure.}
+  \resumeItem{Operated in an \textbf{Agile/Scrum} environment, leveraging Jira, Confluence, and the Atlassian suite to manage sprints, track tasks, and document technical work.}
+  \resumeItem{Collaborated with cross-functional teams on classified defense projects and obtained a \textbf{Top Secret} security clearance.}
 \end{itemize}
- 
-\vspace{3pt}
+
+\vspace{2pt}
 \jobentry{Rutgers Office of Career Exploration}{FIGS Peer Instructor}{New Brunswick, NJ}{Jan. 2025 -- Dec. 2026}
 \begin{itemize}
-  \resumeItem{Competitively selected to design and deliver a First-Year Interest Group Seminar on Computer Science to over \textbf{30 students}.}
-  \resumeItem{Led an engaging classroom environment by facilitating discussions, structuring lesson plans, and adapting teaching strategies on topics in computer science.}
-  \resumeItem{Conducted \textbf{weekly meetings} with fellow peer instructors to align curriculum, share feedback, and coordinate seminar logistics.}
-  \resumeItem{Participated in the \textbf{interviewing and selection process} for incoming peer instructor candidates, evaluating communication skills and teaching potential.}
+  \resumeItem{Competitively selected to design and deliver a First-Year Interest Group Seminar on Computer Science fundamentals to over \textbf{30 students}.}
+  \resumeItem{Led an engaging classroom environment by facilitating discussions, structuring lesson plans, and adapting teaching strategies to diverse learning styles.}
+  \resumeItem{Conducted \textbf{weekly meetings} with fellow peer instructors to align curriculum and coordinate logistics, and participated in \textbf{interviewing} incoming instructor candidates.}
 \end{itemize}
- 
-\vspace{3pt}
+
+\vspace{2pt}
 \jobentry{Frutta Bowls}{Shift Leader}{Toms River, NJ}{June 2023 -- Aug. 2025}
 \begin{itemize}
   \resumeItem{Supervised \textbf{2--3 employees} per shift and oversaw the onboarding and training of 8 new team members.}
-  \resumeItem{Managed daily inventory tracking to minimize waste and ensure consistent product availability}
-  \resumeItem{Opened and closed the store independently, including cash reconciliation, daily sales reporting, and securing the facility.}
 \end{itemize}
- 
+
 % PROJECTS
 \section{Projects}
- 
+
 \projectentry{Terminal Bullet Chess \textnormal{\small $\cdot$ C++}}{}
 \begin{itemize}
   \resumeItem{Engineered a two-player online bullet chess game with \textbf{TCP/IP socket} communication and a multithreaded server for real-time move validation and game synchronization.}
 \end{itemize}
- 
+
 \vspace{2pt}
 \projectentry{Wordle Clone \textnormal{\small $\cdot$ Java}}{}
 \begin{itemize}
   \resumeItem{Developed an interactive Wordle clone using \textbf{Java Swing} with dictionary validation, animated feedback, and clean object-oriented design with full unit testing coverage.}
 \end{itemize}
- 
+
 \vspace{2pt}
 \projectentry{S.N.O.L.F \textnormal{\small $\cdot$ Python}}{}
 \begin{itemize}
   \resumeItem{Built a snowboarding trick generator leveraging \textbf{randomization logic} and modular architecture; applied probability theory and algorithmic design principles throughout.}
 \end{itemize}
- 
+
 % TECHNICAL SKILLS
 \section{Technical Skills}
- 
+
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\linewidth}{@{} >{\bfseries\small}l @{\hspace{10pt}} >{\small}X @{}}
-  Languages           & Python, C/C++, Java, R, SQL, MATLAB, Bash \\
-  Frameworks \& Tools & Git, GitHub, Jupyter, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, Apache Spark, WebSockets, MySQL, PostgreSQL, NoSQL Web APIs \\
-  Platforms           & Linux, Unix \\
+  Languages           & Python, C/C++, Java, R, SQL, MATLAB, Bash, YAML \\
+  Frameworks \& Tools & Docker, Kubernetes, Ansible, PyYAML, Git, GitHub, Jira, Confluence, Atlassian Suite, Jupyter, NumPy, Pandas, Matplotlib, Apache Spark, WebSockets, MySQL, PostgreSQL, Web APIs \\
+  Practices           & Agile, Scrum, Containerization, Networking, Regression Testing, STIG/Security Hardening, CI/CD \\
+  Platforms           & Linux, Unix, RHEL \\
 \end{tabularx}
- 
+
 % LEADERSHIP & INVOLVEMENT
 \section{Leadership \& Campus Involvement}
- 
+
 \begin{itemize}
   \resumeItem{\textbf{USACS} --- Member, Undergraduate Student Alliance of Computer Scientists, Rutgers University}
-  \resumeItem{\textbf{RUST} --- Member, Rutgers University Ski and Snowboard Team }
   \resumeItem{\textbf{Ocean County Ski Club} --- Active member}
 \end{itemize}
 
-\section{Awards \& Other}
-\begin{itemize}
- \resumeItem{\textbf{Dean's List} --- Spring 2025, Fall 2025, and Spring 2026}
- \resumeItem{\textbf{Active Security Clearance} --- Top Secret}
- \end{itemize}
- 
 \end{document}
-
