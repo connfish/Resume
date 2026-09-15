@@ -12,7 +12,7 @@
 \usepackage{parskip}
 
 % Page geometry - tighter margins
-\geometry{top=0.4in, bottom=0.4in, left=0.55in, right=0.55in}
+\geometry{top=0.3in, bottom=0.3in, left=0.45in, right=0.45in}
 
 % No page numbers
 \pagestyle{empty}
@@ -26,7 +26,7 @@
   {\normalsize\bfseries}
   {}{0em}{\sectionfont}
   [\vspace{1pt}\titlerule\vspace{2pt}]
-\titlespacing{\section}{0pt}{4pt}{2pt}
+\titlespacing{\section}{0pt}{3pt}{1pt}
 
 % Custom commands
 \newcommand{\resumeItem}[1]{\item \small #1}
@@ -45,7 +45,7 @@
 }
 
 % List settings - very tight
-\setlist[itemize]{leftmargin=1.1em, itemsep=0pt, parsep=0pt, topsep=1pt, label=\textbullet}
+\setlist[itemize]{leftmargin=1.1em, itemsep=0pt, parsep=0pt, topsep=0pt, label=\textbullet}
 
 \begin{document}
 
@@ -75,74 +75,75 @@
 
 \vspace{2pt}
 \noindent\textbf{\small Relevant Coursework:}\hspace{4pt}
-\small Data Structures, Computer Architecture, Design \& Analysis of Algorithms, Data Management for Data Science, Database Management, Machine Learning Principles, Systems Programming, Discrete Math II, Calculus III, Linear Algebra
+\small Data Structures, Computer Architecture, Design \& Analysis of Algorithms, Data Management for Data Science, Database Management, Machine Learning Principles, Systems Programming, Linear Algebra
 
 % WORK EXPERIENCE
 \section{Work Experience}
 
 \jobentry{Lockheed Martin --- Rotary and Mission Systems}{Software Engineering Intern, ECIW}{Remote}{Aug. 2026 -- Present}
 \begin{itemize}
-  \resumeItem{Developed and maintained system infrastructure components within the ECIW Department, contributing to mission-critical software performance and reliability.}
-  \resumeItem{Automated infrastructure services, provisioning, and network configuration using \textbf{Ansible}, PyYAML, and custom \textbf{Python} scripts to streamline deployment across many diverse systems.}
-  \resumeItem{Developed Python scripts and an automated \textbf{STIG hardening} to enforce security compliance across \textbf{RHEL} and Linux systems, and authored regression testing playbooks to validate reliability.}
-  \resumeItem{Deployed and managed containerized services using \textbf{Docker} and \textbf{Kubernetes}.}
+  \resumeItem{Developed and maintained system infrastructure components supporting mission-critical software performance and reliability.}
+  \resumeItem{Automated infrastructure services, provisioning, and network configuration using \textbf{Ansible}, PyYAML, and custom \textbf{Python} scripts, streamlining deployment and eliminating manual setup across diverse systems and environments.}
+  \resumeItem{Supported the migration of virtualized infrastructure from \textbf{Red Hat Virtualization} to \textbf{OpenShift Virtualization}.}
+  \resumeItem{Developed Python scripts and an automated \textbf{STIG hardening} pipeline enforcing \textbf{DISA} security compliance across \textbf{RHEL} and Linux systems, with regression testing playbooks confirming reliability after each configuration change.}
+  \resumeItem{Deployed and managed containerized services using \textbf{Docker} and \textbf{Kubernetes}, including image builds and orchestration.}
 \end{itemize}
 
-\vspace{2pt}
+\vspace{1pt}
 \jobentry{Lockheed Martin --- Rotary and Mission Systems}{Software Engineering Intern, SEMS}{King of Prussia, PA}{May -- Aug. 2026}
 \begin{itemize}
-  \resumeItem{Programmed low-level system software in \textbf{C++} for an \textbf{Inertial Measurement Unit (IMU)} to enable accurate navigation in \textbf{GPS-denied environments}.}
-  \resumeItem{Designed and coded simulations of the IMU system in \textbf{MATLAB} and \textbf{Python} to model, test, and validate performance under varied conditions.}
+  \resumeItem{Programmed low-level system software in \textbf{C++} for an \textbf{Inertial Measurement Unit (IMU)}, implementing sensor data acquisition and device-level hardware interfaces to enable accurate, real-time navigation in \textbf{GPS-denied environments}.}
+  \resumeItem{Designed and coded simulations of the IMU system in \textbf{MATLAB} and \textbf{Python} to model sensor behavior, test edge cases, and validate navigation accuracy across operating, environmental, and fault conditions.}
   \resumeItem{Collaborated with cross-functional teams on classified defense projects in a secure, compartmented environment.}
-  \resumeItem{Operated in an \textbf{Agile/Scrum} environment using Jira, Confluence, and the Atlassian suite.}
+  \resumeItem{Operated in an \textbf{Agile/Scrum} environment, tracking work in Jira and documentation in Confluence across the Atlassian suite.}
+  \resumeItem{Served as \textbf{Scrum Master} for the intern project team, creating, assigning, and closing tickets throughout each sprint.}
 \end{itemize}
 
-\vspace{2pt}
+\vspace{1pt}
 \jobentry{Rutgers Office of Career Exploration}{FIGS Peer Instructor}{New Brunswick, NJ}{Jan. 2025 -- Dec. 2026}
 \begin{itemize}
-  \resumeItem{Competitively selected to design and deliver a First-Year Interest Group Seminar on Computer Science to \textbf{25 students}.}
-  \resumeItem{Led an engaging classroom environment by facilitating discussions, structuring lesson plans, and adapting teaching strategies to diverse learning styles.}
-  \resumeItem{Conducted \textbf{weekly meetings} with fellow peer instructors to align curriculum and coordinate logistics, and participated in \textbf{interviewing} incoming instructor candidates.}
+  \resumeItem{Competitively selected to design and deliver a First-Year Interest Group Seminar on Computer Science to \textbf{23 students}.}
+  \resumeItem{Led an engaging classroom by facilitating weekly discussions, structuring lesson plans and in-class activities, and adapting teaching strategies to a wide range of student learning styles and backgrounds.}
+  \resumeItem{Held \textbf{weekly meetings} with fellow peer instructors to align curriculum across sections and coordinate scheduling, and participated in \textbf{interviewing} and selecting incoming instructor candidates.}
 \end{itemize}
 
 % PROJECTS
 \section{Projects}
 
-\projectentry{Terminal Bullet Chess \textnormal{\small $\cdot$ C++}}{}
+\projectentry{Stigsmith --- Automated STIG Remediation \textnormal{\small $\cdot$ C\# / .NET}}{}
 \begin{itemize}
-  \resumeItem{Engineered a two-player online bullet chess game with \textbf{TCP/IP socket} communication and a multithreaded server for real-time move validation and game synchronization.}
+  \resumeItem{Built a \textbf{.NET 10 / C\# 14} service that ingests \textbf{SCAP} scan results and \textbf{DISA STIG} checklists (\texttt{.ckl}, \texttt{.cklb}, XCCDF, ARF), classifies which findings are automatable, and drafts \textbf{Ansible} remediation from each rule's prescribed fix text with a locally hosted \textbf{LLM} (\textbf{Ollama}), keeping air-gapped environments offline.}
+  \resumeItem{Engineered the validation loop behind it --- lint, apply in a disposable \textbf{Docker} container, re-scan to confirm the fix, re-apply to prove \textbf{idempotency} --- on an \textbf{ASP.NET Core} API with background job queues, \textbf{SignalR} streaming, and evidence stored in \textbf{PostgreSQL} via \textbf{EF Core}.}
 \end{itemize}
 
-\vspace{2pt}
+\vspace{1pt}
+\projectentry{Terminal Bullet Chess \textnormal{\small $\cdot$ C++}}{}
+\begin{itemize}
+  \resumeItem{Engineered a two-player online bullet chess game over \textbf{TCP/IP sockets} with a multithreaded server handling concurrent games, real-time move validation, turn enforcement, state synchronization, and per-player countdown clocks.}
+\end{itemize}
+
+\vspace{1pt}
 \projectentry{Wordle Clone \textnormal{\small $\cdot$ Java}}{}
 \begin{itemize}
-  \resumeItem{Developed an interactive Wordle clone using \textbf{Java Swing} with dictionary validation, animated feedback, and clean object-oriented design with full unit testing coverage.}
+  \resumeItem{Developed an interactive Wordle clone in \textbf{Java Swing} with dictionary validation, animated tile feedback, on-screen keyboard state tracking, and object-oriented design backed by unit tests across game logic and input handling.}
 \end{itemize}
 
 % TECHNICAL SKILLS
 \section{Technical Skills}
 
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.05}
 \begin{tabularx}{\linewidth}{@{} >{\bfseries\small}l @{\hspace{10pt}} >{\small}X @{}}
-  Languages           & Python, C/C++, Java, R, SQL, MATLAB, Bash, YAML \\
-  Frameworks \& Tools & Docker, Kubernetes, Ansible, PyYAML, Git, GitHub, Jira, Confluence, Atlassian Suite, Jupyter, NumPy, Pandas, Matplotlib, Apache Spark, WebSockets, MySQL, PostgreSQL, Web APIs \\
-  Practices           & Agile, Scrum, Containerization, Networking, Regression Testing, STIG/Security Hardening, CI/CD \\
-  Platforms           & Linux, RHEL \\
+  Languages        & Python, C/C++, C\#, Java, SQL, Bash, YAML, R, MATLAB \\
+  Infrastructure   & Linux, RHEL, Docker, Kubernetes, OpenShift, Ansible, Git, GitHub, CI/CD \\
+  Backend \& Data  & .NET, ASP.NET Core, EF Core, SignalR, PostgreSQL, MySQL, NumPy, Pandas, Apache Spark, Jupyter, Ollama \\
+  Practices        & Agile, Scrum, STIG/SCAP Security Hardening, Containerization, Networking, Unit Testing, LLM Integration \\
 \end{tabularx}
 
-% CERTIFICATIONS & CLEARANCE
-\section{Certifications \& Clearance}
+% CERTIFICATIONS, CLEARANCE & INVOLVEMENT
+\section{Certifications, Clearance \& Involvement}
 
 \begin{itemize}
-  \resumeItem{\textbf{Active Top Secret Security Clearance} --- U.S. Department of Defense}
-\end{itemize}
-
-% LEADERSHIP & INVOLVEMENT
-\section{Leadership \& Campus Involvement}
-
-\begin{itemize}
-  \resumeItem{\textbf{USACS} --- Member, Undergraduate Student Alliance of Computer Scientists, Rutgers University}
-  \resumeItem{\textbf{Ocean County Ski Club} --- Active member}
+  \resumeItem{\textbf{Active Top Secret Security Clearance} --- U.S. Department of Defense $\cdot$ \textbf{USACS} Member $\cdot$ \textbf{Ocean County Ski Club} Member}
 \end{itemize}
 
 \end{document}
