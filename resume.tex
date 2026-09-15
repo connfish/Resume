@@ -112,20 +112,19 @@
 
 \projectentry{Stigsmith --- Automated STIG Remediation \textnormal{\small $\cdot$ C\# / .NET}}{}
 \begin{itemize}
-  \resumeItem{Built a \textbf{.NET 10 / C\# 14} service that ingests \textbf{SCAP} scan results and \textbf{DISA STIG} checklists (\texttt{.ckl}, \texttt{.cklb}, XCCDF, ARF), classifies which findings are automatable, and drafts \textbf{Ansible} remediation from each rule's prescribed fix text with a locally hosted \textbf{LLM} (\textbf{Ollama}), keeping air-gapped environments offline.}
-  \resumeItem{Engineered the validation loop behind it --- lint, apply in a disposable \textbf{Docker} container, re-scan to confirm the fix, re-apply to prove \textbf{idempotency} --- on an \textbf{ASP.NET Core} API with background job queues, \textbf{SignalR} streaming, and evidence stored in \textbf{PostgreSQL} via \textbf{EF Core}.}
+  \resumeItem{Built a \textbf{.NET 10 / C\# 14} service that ingests \textbf{SCAP} scan results and \textbf{DISA STIG} checklists (\texttt{.ckl}, \texttt{.cklb}, XCCDF, ARF), classifies which findings are automatable, and drafts \textbf{Ansible} remediation from each rule's prescribed fix text with a locally hosted \textbf{LLM} (\textbf{Ollama}) so air-gapped environments stay offline, then validates every playbook by linting it, applying it in a disposable \textbf{Docker} container, re-scanning to confirm the fix, and re-applying to prove \textbf{idempotency}, all on an \textbf{ASP.NET Core} API with background job queues, \textbf{SignalR} streaming, and evidence stored in \textbf{PostgreSQL} via \textbf{EF Core}.}
 \end{itemize}
 
 \vspace{1pt}
 \projectentry{Terminal Bullet Chess \textnormal{\small $\cdot$ C++}}{}
 \begin{itemize}
-  \resumeItem{Engineered a two-player online bullet chess game over \textbf{TCP/IP sockets} with a multithreaded server handling concurrent games, real-time move validation, turn enforcement, state synchronization, and per-player countdown clocks.}
+  \resumeItem{Built a two-player online bullet chess game in \textbf{C++17}: a \textbf{bitboard} move generator covering castling, en passant, promotion, and checkmate, stalemate, threefold-repetition, 50-move, and insufficient-material detection; a \textbf{multithreaded TCP server} that pairs players into game rooms, runs a handler thread per player plus a timer thread, and validates every move server-side over a custom text protocol; and an ANSI terminal client with Unicode pieces, live clocks with per-move increment, and move history.}
 \end{itemize}
 
 \vspace{1pt}
 \projectentry{Wordle Clone \textnormal{\small $\cdot$ Java}}{}
 \begin{itemize}
-  \resumeItem{Developed an interactive Wordle clone in \textbf{Java Swing} with dictionary validation, animated tile feedback, on-screen keyboard state tracking, and object-oriented design backed by unit tests across game logic and input handling.}
+  \resumeItem{Developed an interactive Wordle clone in \textbf{Java Swing}: a 6x5 grid of key-listener-driven text fields with per-letter green/yellow/gray feedback, repeat-letter guards, win and loss dialogs, and one-click reset into a fresh round, split into separate game-logic and UI classes.}
 \end{itemize}
 
 % TECHNICAL SKILLS
@@ -139,11 +138,11 @@
   Practices        & Agile, Scrum, STIG/SCAP Security Hardening, Containerization, Networking, Unit Testing, LLM Integration \\
 \end{tabularx}
 
-% CERTIFICATIONS, CLEARANCE & INVOLVEMENT
-\section{Certifications, Clearance \& Involvement}
+% CERTIFICATIONS & Clearance
+\section{Certifications \& Clearance}
 
 \begin{itemize}
-  \resumeItem{\textbf{Active Top Secret Security Clearance} --- U.S. Department of Defense $\cdot$ \textbf{USACS} Member $\cdot$ \textbf{Ocean County Ski Club} Member}
+  \resumeItem{\textbf{Active Top Secret Security Clearance} --- U.S. Department of Defense $\cdot$ \textbf{CompTIA Security+} --- In Progress}
 \end{itemize}
 
 \end{document}
